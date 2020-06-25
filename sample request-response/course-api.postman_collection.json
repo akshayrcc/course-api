@@ -1,0 +1,249 @@
+{
+	"info": {
+		"_postman_id": "2ead0fdd-8434-4a18-bcbc-07ddb3d6bc3a",
+		"name": "course-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Hello World",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8090/Hallo",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"Hallo"
+					]
+				},
+				"description": "Hello World"
+			},
+			"response": []
+		},
+		{
+			"name": "get all available topics",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8090/topics",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"topics"
+					]
+				},
+				"description": "GET all available topics "
+			},
+			"response": []
+		},
+		{
+			"name": "get details for given topic",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8090/topics/java",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"topics",
+						"java"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add a new topic",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"java\",\r\n    \"name\": \"Java\",\r\n    \"description\": \"Because I m lovin it\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8090/topics",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"topics"
+					]
+				},
+				"description": "POST any new topic"
+			},
+			"response": []
+		},
+		{
+			"name": "update any given topic",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"id\": \"001\",\r\n        \"name\": \"Updated Perl\",\r\n        \"description\": \"My super Lang\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8090/topics/003",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"topics",
+						"003"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delele any given topic",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8090/topics/009",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"topics",
+						"009"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all available courses for given topic",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8090/topics/java/courses",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"topics",
+						"java",
+						"courses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get details for given course of given topic",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8090/topics/java/courses/java-streams",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"topics",
+						"java",
+						"courses",
+						"java-streams"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add a new course for given topic",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"java-streams\",\r\n    \"name\": \"Java streams Course\",\r\n    \"description\": \" Java streams Because I m lovin it\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8090/topics/java/courses",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"topics",
+						"java",
+						"courses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete given course",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8090/topics/java/courses/java-lambda",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"topics",
+						"java",
+						"courses",
+						"java-lambda"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
